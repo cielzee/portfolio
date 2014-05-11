@@ -1,0 +1,163 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>{ visibility: inherit; } How to make a horizontal website</title>
+    <link href="css/site.css" rel="stylesheet" media="screen">
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+    <script>
+    $(document).ready(function() {
+        $("li a").bind("click", function(event) {
+            event.preventDefault();
+            var target = $(this).attr("href");
+            $("html, body").stop().animate({
+                scrollLeft: $(target).offset().left,
+                scrollTop: $(target).offset().top
+            }, 1200);
+        });
+        $('.nav-item a').click(function(e) {
+            $('li.active').removeClass('active');
+            $(e.currentTarget).parent().addClass('active');
+        });
+        $('.nav-num').click(function(e){
+            var id= '#' + $(e.currentTarget).attr('id');
+            $('.project.active').removeClass('active');
+            $(id).addClass('active');
+        });
+   
+        var $rotator = $(".image-container");
+        $rotator.find("img:gt(0)").hide();
+        setTimeout(Rotate, 5000);
+
+        function Rotate() {
+            var $current = $rotator.find("img:visible");
+            var $next = $current.next();
+            if ($next.length == 0) $next = $rotator.find("img:eq(0)");
+            $current.hide();
+            $next.show();
+            setTimeout(Rotate, 5000);
+        }
+        console.log($('.panel:visible').attr('id'));
+    });
+    </script>
+    <style type="text/css">
+    </style>
+</head>
+
+<body>
+    <div class="border"></div>
+    <div class="header">
+        <div class="name">Cat Zhang</div>
+        <div class="title">Front End Developer</div>
+    </div>
+    <div class="nav">
+        <ul>
+            <li class="nav-item active"><a href="#home">home</a>
+            </li>
+            <li class="nav-item"><a href="#experience">experience</a>
+            </li>
+            <li class="nav-item"><a href="#skills">skills</a>
+            </li>
+            <li class="nav-item"><a href="#work">work</a>
+            </li>
+            <li class="nav-item"><a href="#contact">contact</a>
+            </li>
+        </ul>
+    </div>
+    <div id="wrap">
+        <div id="home" class="panel">
+            <div class="panel-content">
+                <div class="photo"></div>
+                I'm Catherine Zhang, a Los Angeles based web developer. I graduated from the University of Southern California in May 2012, with a degree in Computer Science and an emphasis in web development. I have a passion for technology and an appreciation for modern design on any medium. My experience in web development has primarily been front-end, but I am always open to picking up new languages and frameworks and aiming to move towards becoming a full stack developer.</div>
+        </div>
+        <div id="experience" class="panel">
+            <div class="panel-content">
+                <div class="job">
+                    <div class="job-title" id="user-interface-developer">User Interface Developer</div>
+                    <div class="company">Square One Solutions (Santa Monica, CA)</div>
+                    <div class="time">oct 2013 - present</div>
+                    <div class="job-description" id="user-interface-developer">
+                        Develop functional user interfaces tailored to a specific client's business needs
+                        <br>Work closely with back-end dev for integrating end to end
+                        <br>Use latest frameworks that best suit project requirements to build functionality
+                        <br>Implement designs and deliver functionality on given timelines across multiple projects
+                    </div>
+                </div>
+                <div class="job">
+                    <div class="job-title" id="computer-systems-technologist">Computer Systems Technologist / Intern</div>
+                    <div class="company">Raytheon Web Solutions (Pasadena, CA)</div>
+                    <div class="time">june 2012-oct 2013 / june 2011 - june 2012</div>
+                    <div class="job-description">
+                        Work in a team-based environment buiding various cycles of websites
+                        <br>Create themes and extend functionality for content management systems
+                        <br>Develop front-end interactive scripts for education and outreach websites
+                        <br>Develop back-end scripts for internal business systems
+                    </div>
+                </div>
+                <div class="job">
+                    <div class="job-title" id="ta">Teaching Assistant</div>
+                    <div class="company">ITP 104 (Information Technology Program, USC)</div>
+                    <div class="time">spring 2011</div>
+                    <div class="job-description">
+                        Answered students' questions during lecture and lab
+                        <br>Provided assistance during office hours for assignments and projects
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="skills">
+            <div class="panel-content">
+                <div class="skill-title">LANGUAGES</div>
+                <div class="skill-list">Java, HTML/CSS, jQuery, SQL, PHP, JSON</div>
+                <div class="skill-title">VERSION CONTROL</div>
+                <div class="skill-list">Git, Mercurial, SVN</div>
+                <div class="skill-title">OPERATING SYSTEMS</div>
+                <div class="skill-list">Mac, Windows, Unix</div>
+                <div class="skill-title">FRAMEWORKS</div>
+                <div class="skill-list">AngularJS, BackboneJS, CodeIgniter</div>
+                <div class="skill-title">CMS</div>
+                <div class="skill-list">Wordpress, Joomla, Magento, Drupal</div>
+            </div>
+        </div>
+        <div id="work">
+            <div class="panel-content">
+                 <div class="project active" id="mb">
+                    <div class="image-container">
+                            
+                        <img src="images/mb/2.png">
+                        <img src="images/mb/3.png">
+                        <img src="images/mb/4.png">
+                        <img src="images/mb/5.png">
+                        <img src="images/mb/6.png">
+                    </div>
+                    <div class="project-title">Monterey Bay Aquarium</div>
+                    <div class="project-role">Front-end developer</div>
+                    <div class="project-description">This was a project for which I was solely responsible for the front-end, a site where Monterey Bay fish scientists would enter various types of data regarding different species of fish across 10 criteria, with each criteria page producing a score for that category, and using those 10 scores to produce a final score. The front-end is all angular with the calculations and scoring updating in real time. This was also my first application built in Angular.</div>
+                </div>
+                <div class="project" id="nbc">
+                    <div class="image-container">
+                        <img src="images/nbc/1.png">
+                        <img src="images/nbc/2.png">
+                        <img src="images/nbc/3.png">
+                        <img src="images/nbc/4.png">
+                        <img src="images/nbc/5.png">
+                    </div>
+                    <div class="project-title">NBCUniversal</div>
+                    <div class="project-role">Front-end developer</div>
+                    <div class="project-description">This project is an internal website where NBCUniversal  employees can keep track of their invoices and purchase orders. This was done in BackboneJS, and a user would be able to go through all stages of creating an invoice, to saving and editing, and as well as viewing and approving. I implemented all of the functionality for this new phase of an existing project with clean and robust code, while also maintaining compability with legacy code.</div>
+                </div>
+                <br>
+             <div class="nav-container"><div class="nav-num" id="mb">1</div> | <div class="nav-num" id="nbc">2</div></div>
+            </div>
+        </div>
+        <div id="contact">
+            <div class="panel-content"></div>
+        </div>
+    </div>
+
+</body>
+
+</html>

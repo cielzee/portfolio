@@ -1,0 +1,196 @@
+body {
+    font-family:'Open Sans', sans-serif;
+    margin: 0;
+    height: 100%;
+    color: #555;
+}
+* {
+    margin:0;
+    padding:0;
+}
+html {
+    height:100%;
+    overflow-x:hidden;
+}
+#wrap {
+    min-height:100%;
+    width:500%;
+    overflow:hidden;
+}
+#home, #experience, #skills, #work, #contact {
+    width:20%;
+    float:left;
+    text-align: center;
+}
+#home {
+    text-align: center;
+    margin-top: 230px;
+    line-height: 30px;
+}
+#home div.panel-content {
+    width: 500px;
+    margin: auto;
+    color: #888;
+}
+* html ul {
+    position:absolute;
+    left:expression(0+((e=document.documentElement.scrollLeft)?e:document.body.scrollLeft)+'px');
+}
+* html {
+    background:url(fake.jpg)
+}
+* html #full {
+    height:100%;
+}
+.border {
+    height: 5px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #008080;
+}
+.header {
+    text-align: center;
+    margin-top: 50px;
+    width: 100%;
+    position: fixed;
+    z-index: 0;
+}
+.content {
+    width: 8000px;
+}
+.name {
+    font-size: 26px;
+    font-weight: bold;
+}
+.title {
+    font-size: 18px;
+}
+.nav {
+    margin: 0 0 50px 0;
+    width: 150px;
+    height: 100%;
+    float: left;
+    position: fixed;
+    z-index: 100;
+    padding-top: 50px;
+}
+.nav ul {
+    list-style: none;
+    height: 50px;
+    margin: 0;
+    padding: 0;
+    margin: auto;
+}
+.nav ul li {
+    display: block;
+    font-size: 14px;
+    padding: 5px 10px;
+    margin: 0 20px;
+}
+.nav ul li.active {
+    font-weight: bold;
+    border-left: 5px solid #008080;
+}
+.nav ul li a, .nav ul li a:visited {
+    color: inherit;
+    text-decoration: none;
+}
+div.photo {
+    background: url(../images/photo.jpg) no-repeat;
+    width: 138px;
+    height: 135px;
+    margin: auto;
+    background-size: 100%;
+    margin-bottom: 100px;
+}
+div#experience {
+    margin-top: 200px;
+}
+#experience div.panel-content {
+    width: 700px;
+    margin: auto;
+}
+div.job {
+    border-bottom: 2px solid #ccc;
+    padding: 15px 0 10px 0;
+}
+div.job:last-child {
+    border-bottom: 0;
+}
+div.job-title {
+    color: #555;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 30px;
+}
+div.company, div.time {
+    color: #008080;
+    display: inline;
+    font-size: 16px;
+    line-height: 16px;
+}
+div.time {
+    font-size: 14px;
+    margin-left: 10px;
+    font-weight: 600;
+}
+div.job-description {
+    color: #555;
+    margin: 10px 0;
+}
+div#skills {
+    margin-top: 300px;
+    font-size: 18px;
+    line-height: 30px;
+}
+div.skill-title{
+	color: #008080;
+}
+div#work .panel-content{
+	text-align: left;
+	width: 900px;
+	margin: auto;
+	margin-top: 125px;
+	position: relative;
+}
+
+div.project.active{
+	display: block;
+}
+div.project{
+	width: 800px;
+	
+	display: none;
+	height: 550px;
+	margin: auto;
+}
+div.image-container{
+	width: 700px;
+	height: 425px;
+	border: 1px solid #ccc;
+	margin: auto;
+}
+div.image-container img{
+	width: 700px;
+}
+div.nav-num{
+	font-size: 14px;
+	display: inline;
+}
+div.project-title{
+	font-weight: 600;
+	font-size: 18px;
+	margin-top: 10px;
+}
+div.project-role{
+	color: #008080;
+	margin-bottom: 10px;
+}
+div.project-description{
+	font-size: 14px;
+}
+div.nav-container{
+	float: right;
+	margin-right: 55px;
+}
