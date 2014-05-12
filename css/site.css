@@ -140,7 +140,7 @@ div.job-description {
     margin: 10px 0;
 }
 div#skills {
-    margin-top: 300px;
+    margin-top: 275px;
     font-size: 18px;
     line-height: 30px;
 }
@@ -178,6 +178,9 @@ div.nav-num{
 	font-size: 14px;
 	display: inline;
 }
+div.nav-num.selected{
+	color: #008080;
+}
 div.project-title{
 	font-weight: 600;
 	font-size: 18px;
@@ -193,4 +196,109 @@ div.project-description{
 div.nav-container{
 	float: right;
 	margin-right: 55px;
+	margin-top: 20px;
+}
+div#contact{
+	margin-top: 275px;
+}
+div.contact-link{
+	color: #008080;
+	margin-bottom: 10px;
+}
+div#contact a{
+	color: inherit;
+}
+@media (max-width: 564px){
+	body{
+		
+	}
+	.nav{
+		height: 50px;
+		top: 5px;
+		width: 100%;
+		padding-top: 0;
+		margin-top: 0;
+		text-align: center;
+		background: #fff;
+	}
+	.nav ul li{
+		display: inline-block;
+		padding: 0;
+		margin: 10px 5px 0 5px;
+	}
+	.nav ul li.active{
+		border-left: none;
+	}
+	div.photo{
+		display: none;
+	}
+	.header{
+		padding-top: 100px;
+		position: relative;
+	}
+	#home, #experience, #work, #skills, #contact{
+		float: none;
+		width: 100%;
+	}
+	#home{
+		padding-top: 100px;
+		margin-top: 0;
+	}
+	#home .panel-content{
+		width: 300px !important;
+	}
+	#experience .panel-content{
+		width: 300px !important;
+		text-align: left;
+	}
+	#experience{
+		padding-top: 50px;
+		font-size: 14px;
+	}
+	#wrap{
+		width: 100%;
+	}
+	div.job-title, div.company, div.time{
+		font-size: 14px;
+		display: block;
+		line-height: 20px;
+	}
+	div.time{
+		margin-left: 0;
+		font-size: 12px;
+	}
+	#skills{
+		margin-top: 0;
+		padding-top: 150px;
+		font-size: 14px !important;
+		padding-bottom: 150px;
+	}
+	#work{
+		
+		padding-top: 75px;
+	}
+	#work .panel-content{
+		margin-top: 0 !important;
+		width: 300px !important;
+	}
+	div.project{
+		height: auto;
+		width: 300px !important;	
+	}
+	div.image-container img{
+		width: 300px;
+		height: auto;
+	}
+	.image-container{
+		width: 300px !important;
+		height: 175px !important;
+	}
+	
+	.nav-container{
+		margin: 0 !important;
+
+	}
+	#contact{
+		padding-bottom: 300px;
+	}
 }

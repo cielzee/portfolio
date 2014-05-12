@@ -3,7 +3,7 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>{ visibility: inherit; } How to make a horizontal website</title>
+    <title>catherine zhang</title>
     <link href="css/site.css" rel="stylesheet" media="screen">
     
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
@@ -23,9 +23,11 @@
             $(e.currentTarget).parent().addClass('active');
         });
         $('.nav-num').click(function(e){
+            $('.nav-num.selected').removeClass('selected');
             var id= '#' + $(e.currentTarget).attr('id');
             $('.project.active').removeClass('active');
             $(id).addClass('active');
+            $(this).addClass('selected');
         });
    
         var $rotator = $(".image-container");
@@ -50,7 +52,7 @@
 <body>
     <div class="border"></div>
     <div class="header">
-        <div class="name">Cat Zhang</div>
+        <div class="name">Catherine Zhang</div>
         <div class="title">Front End Developer</div>
     </div>
     <div class="nav">
@@ -108,7 +110,7 @@
                 </div>
             </div>
         </div>
-        <div id="skills">
+        <div id="skills" class="panel">
             <div class="panel-content">
                 <div class="skill-title">LANGUAGES</div>
                 <div class="skill-list">Java, HTML/CSS, jQuery, SQL, PHP, JSON</div>
@@ -122,7 +124,7 @@
                 <div class="skill-list">Wordpress, Joomla, Magento, Drupal</div>
             </div>
         </div>
-        <div id="work">
+        <div id="work" class="panel">
             <div class="panel-content">
                  <div class="project active" id="mb">
                     <div class="image-container">
@@ -149,12 +151,19 @@
                     <div class="project-role">Front-end developer</div>
                     <div class="project-description">This project is an internal website where NBCUniversal  employees can keep track of their invoices and purchase orders. This was done in BackboneJS, and a user would be able to go through all stages of creating an invoice, to saving and editing, and as well as viewing and approving. I implemented all of the functionality for this new phase of an existing project with clean and robust code, while also maintaining compability with legacy code.</div>
                 </div>
-                <br>
-             <div class="nav-container"><div class="nav-num" id="mb">1</div> | <div class="nav-num" id="nbc">2</div></div>
+                
+             <div class="nav-container"><div class="nav-num selected" id="mb">1</div> | <div class="nav-num" id="nbc">2</div></div>
             </div>
         </div>
-        <div id="contact">
-            <div class="panel-content"></div>
+        <div id="contact" class="panel">
+            <div class="panel-content">
+                <div class="contact-header">email</div>
+                <div class="contact-link"><a href="mailto:cielzee@gmail.com">cielzee@gmail.com</a></div>
+                <div class="contact-header">linkedin</div>
+                <div class="contact-link"><a href="http://www.linkedin.com/pub/catherine-zhang/76/569/3ba/">linkedin.com/pub/catherine-zhang</a></div>
+                <div class="contact-header">github</div>
+                <div class="contact-link"><a href="https://github.com/cielzee/">github.com/cielzee</a></div>
+            </div>
         </div>
     </div>
 
