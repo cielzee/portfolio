@@ -1,0 +1,186 @@
+html {
+  height: 100%; }
+  html body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    height: 100%;
+    color: #555; }
+    html body .header {
+      text-align: center;
+      width: 100%;
+      position: fixed;
+      z-index: 100;
+      background: #F5F5F5; }
+      html body .header .name {
+        font-size: 36px;
+        font-weight: 700;
+        float: left;
+        padding: 16px 0 16px 64px; }
+      html body .header .nav {
+        float: right;
+        text-align: center;
+        font-size: 20px;
+        padding-right: 64px; }
+        html body .header .nav ul {
+          list-style: none;
+          margin: 0;
+          padding: 0; }
+          html body .header .nav ul li {
+            display: inline-block;
+            text-align: center; }
+            html body .header .nav ul li:hover {
+              transition-property: color, background;
+              transition-duration: .5s;
+              transition-timing-function: ease-out;
+              background: #CFD8DC; }
+              html body .header .nav ul li:hover a {
+                color: #607D8B; }
+            html body .header .nav ul li a {
+              padding: 24px 24px 32px 24px;
+              text-decoration: none;
+              text-align: center;
+              color: #bdbdbd;
+              font-weight: 300;
+              display: block; }
+    html body .panel#about {
+      text-align: center;
+      height: 100%;
+      background: #009688;
+      position: relative;
+      color: #fff; }
+      html body .panel#about .panel-content {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        text-align: center;
+        margin-top: -44px;
+        font-weight: 300;
+        font-size: 20px;
+        font-family: 'Lato', sans-serif;
+        letter-spacing: 1px; }
+        html body .panel#about .panel-content .name {
+          letter-spacing: 15px;
+          font-size: 64px;
+          margin-bottom: 16px;
+          font-weight: 500; }
+    html body .panel#experience {
+      height: 100%;
+      text-align: center; }
+      html body .panel#experience .panel-content .collapsible {
+        margin-top: 148px;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+        border: none; }
+        html body .panel#experience .panel-content .collapsible li {
+          margin: 4px 0; }
+          html body .panel#experience .panel-content .collapsible li:hover {
+            -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+            -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+            box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
+          html body .panel#experience .panel-content .collapsible li .collapsible-header {
+            height: 122px;
+            padding-top: 16px;
+            line-height: 24px;
+            border-bottom: none; }
+            html body .panel#experience .panel-content .collapsible li .collapsible-header .job-title {
+              color: #555;
+              font-weight: 700;
+              font-size: 24px;
+              line-height: 30px;
+              padding: 4px 0; }
+            html body .panel#experience .panel-content .collapsible li .collapsible-header .company {
+              color: #009688;
+              display: inline;
+              font-size: 16px;
+              line-height: 16px;
+              padding: 4px 0; }
+            html body .panel#experience .panel-content .collapsible li .collapsible-header .time {
+              font-size: 14px;
+              font-weight: 400;
+              padding: 4px 0 8px 0;
+              color: #ccc; }
+          html body .panel#experience .panel-content .collapsible li .collapsible-body {
+            border-top: none;
+            border-bottom: none; }
+            html body .panel#experience .panel-content .collapsible li .collapsible-body .job-description {
+              color: #555;
+              margin: 0 0 20px 0;
+              font-weight: 300; }
+    html body .panel#work {
+      position: relative;
+      background: #607D8B; }
+      html body .panel#work .panel-content {
+        padding-top: 132px; }
+        html body .panel#work .panel-content .job {
+          letter-spacing: 1px; }
+          html body .panel#work .panel-content .job .card-image {
+            padding: 16px; }
+            html body .panel#work .panel-content .job .card-image .slider .slides {
+              background: none; }
+              html body .panel#work .panel-content .job .card-image .slider .slides img {
+                background-repeat: no-repeat !important; }
+            html body .panel#work .panel-content .job .card-image .slider .indicators {
+              z-index: 1000; }
+              html body .panel#work .panel-content .job .card-image .slider .indicators .indicator-item.active {
+                background-color: #607D8B !important; }
+          html body .panel#work .panel-content .job .job-title {
+            color: #555;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 30px;
+            padding: 4px 0; }
+          html body .panel#work .panel-content .job .company {
+            color: #008080;
+            display: inline;
+            font-size: 16px;
+            line-height: 16px;
+            padding: 4px 0; }
+          html body .panel#work .panel-content .job .time {
+            font-size: 14px;
+            font-weight: 400;
+            padding: 4px 0 8px 0;
+            color: #ccc; }
+          html body .panel#work .panel-content .job .job-description {
+            color: #555;
+            margin: 8px 0;
+            font-weight: 300; }
+          html body .panel#work .panel-content .job:hover .job-description {
+            display: block; }
+    html body .panel#skills {
+      height: 100%;
+      text-align: center;
+      position: relative; }
+      html body .panel#skills .panel-content {
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        margin-top: -250px; }
+        html body .panel#skills .panel-content .skillset .skills-title {
+          color: #009688;
+          font-weight: 600;
+          font-size: 32px; }
+    html body .panel#contact {
+      color: #fff;
+      height: 100%;
+      background: #880E4F;
+      font-size: 48px;
+      text-align: center;
+      position: relative; }
+      html body .panel#contact .panel-content {
+        position: absolute;
+        top: 50%;
+        margin-top: -54px;
+        width: 100%; }
+        html body .panel#contact .panel-content .col a {
+          text-decoration: none;
+          color: inherit; }
+        html body .panel#contact .panel-content .col .contact-info {
+          display: block;
+          font-size: 24px;
+          font-weight: 300; }
+        html body .panel#contact .panel-content .col:hover i {
+          margin-bottom: 20px;
+          display: block; }
+
+/*# sourceMappingURL=sitev2.css.map */
