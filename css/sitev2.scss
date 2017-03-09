@@ -5,7 +5,13 @@ $phone: '(max-width: 480px)';
     }
 }
 
-$primary-color: #4db6ac;
+$teal-lighten-2: #4db6ac;
+$teal-lighten-4: #b2dfdb;
+$teal-lighten-5: #e0f2f1;
+$teal: #009688;
+$red-lighten-3: #ef9a9a;
+$light-grey: #ccc;
+$dark-grey: #555;
 html {
     height: 100%;
 
@@ -48,10 +54,11 @@ html {
                             transition-property: color, background;
                             transition-duration: 0.5s;
                             transition-timing-function: ease-out;
-                            background: #CFD8DC;
-
+                            // background: #CFD8DC;
+                            background: $teal-lighten-5;
                             a {
-                                color: #607D8B;
+                                // color: #607D8B;
+                                color: $teal;
                             }
                         }
 
@@ -84,7 +91,7 @@ html {
                 .panel-content {
                     width: 100%;
                     text-align: center;
-                    padding: 164px 0;
+                    padding: 164px 0 132px 0;
                     font-weight: 300;
                     font-size: 20px;
                     font-family: 'Lato', sans-serif;
@@ -146,7 +153,7 @@ html {
 
                           .collapsible-body {
                             border: none;
-                            font-size: 14px;
+                            font-size: 15px;
                             margin-top: 16px;
                           }
                         }
@@ -188,7 +195,8 @@ html {
                                 }
 
                                 .job-title {
-                                    color: #555;
+                                    // color: #555;
+                                    color: $teal-lighten-2;
                                     font-weight: 700;
                                     font-size: 24px;
                                     line-height: 30px;
@@ -200,7 +208,7 @@ html {
                                 }
 
                                 .company {
-                                    color: #009688;
+                                    color: $light-grey;
                                     display: inline;
                                     font-size: 16px;
                                     line-height: 16px;
@@ -215,7 +223,7 @@ html {
                                     font-size: 14px;
                                     font-weight: 400;
                                     padding: 4px 0 8px;
-                                    color: #ccc;
+                                    color: $red-lighten-3;
                                     @include respond-to($phone) {
                                         font-size: 14px;
                                         line-height: 16px;
@@ -231,7 +239,7 @@ html {
                                 }
 
                                 .job-description {
-                                    color: #555;
+                                    color: $dark-grey;
                                     margin: 0 0 20px;
                                     @include respond-to($phone) {
                                         font-size: 14px;
@@ -295,7 +303,7 @@ html {
                                     z-index: 1000;
 
                                     .indicator-item.active {
-                                        background-color: #607D8B !important;
+                                        background-color: $teal-lighten-2 !important;
                                     }
 
                                     .indicator-item {
@@ -314,6 +322,7 @@ html {
                             }
 
                             .card-title {
+                              color: $teal-lighten-2;
                                 @include respond-to($phone) {
                                     font-size: 16px;
                                     line-height: 14px;
@@ -329,6 +338,7 @@ html {
                             }
 
                             .card-title {
+                              color: $teal-lighten-2;
                                 @include respond-to($phone) {
                                     font-size: 16px;
                                 }
@@ -399,7 +409,7 @@ html {
                         }
 
                         .skills-title {
-                            color: #009688;
+                            color: $teal-lighten-2;
                             font-weight: 600;
                             font-size: 32px;
                             @include respond-to($phone) {
