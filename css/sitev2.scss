@@ -5,6 +5,7 @@ $phone: '(max-width: 480px)';
     }
 }
 
+$primary-color: #4db6ac;
 html {
     height: 100%;
 
@@ -74,9 +75,6 @@ html {
         .panel {
             &#about {
                 text-align: center;
-                // height: 100%;
-                background: #009688;
-                // position: relative;
                 padding-top: 86px;
                 color: #fff;
                 @include respond-to($phone) {
@@ -84,11 +82,8 @@ html {
                 }
 
                 .panel-content {
-                    // position: absolute;
-                    // top: 50%;
                     width: 100%;
                     text-align: center;
-                    // margin-top: -44px;
                     padding: 164px 0;
                     font-weight: 300;
                     font-size: 20px;
@@ -118,6 +113,44 @@ html {
                             font-size: 14px;
                             font-weight: 300;
                         }
+                        .collapsible {
+                          border: none;
+                          box-shadow: none;
+                          margin-top: 32px;
+                          li {
+                            &.active {
+                              a.down {
+                                display: none;
+                              }
+                              a.up {
+                                display: inline-block;
+                              }
+                            }
+                            a.up {
+                              display: none;
+                            }
+                          }
+                          .collapsible-header {
+                              background: inherit;
+                              border: none;
+                              height: auto;
+                              i {
+                                display: inline-block;
+                                float: none;
+                                margin-right: 0;
+                                margin-top: 1px;
+                              }
+
+
+                          }
+
+                          .collapsible-body {
+                            border: none;
+                            font-size: 14px;
+                            margin-top: 16px;
+                          }
+                        }
+
                     }
                 }
             }
@@ -213,8 +246,6 @@ html {
 
             &#work {
                 position: relative;
-                background: #607D8B;
-
                 .panel-content {
                     padding: 132px 0;
                     @include respond-to($phone) {
@@ -222,17 +253,20 @@ html {
                     }
 
                     .job {
-                      .text {
-                        @include respond-to($phone) {
-                            padding: 16px 8px;
+                        .text {
+                            @include respond-to($phone) {
+                                padding: 16px 8px;
+                            }
+
+                            .text-block {
+                                margin-bottom: 26px;
+                            }
+
+                            .tasks {
+                                margin-top: 8px;
+                            }
                         }
-                        .text-block {
-                          margin-bottom: 26px;
-                        }
-                        .tasks {
-                          margin-top: 8px;
-                        }
-                      }
+
                         .card-image {
                             padding: 16px;
                             @include respond-to($phone) {
@@ -385,7 +419,6 @@ html {
 
             &#contact {
                 color: #fff;
-                background: #880E4F;
                 font-size: 48px;
                 text-align: center;
 
