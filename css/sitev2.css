@@ -119,7 +119,9 @@ html {
             html body .panel#work .panel-content .job .card-image .slider .slides {
               background: none; }
               html body .panel#work .panel-content .job .card-image .slider .slides img {
-                background-repeat: no-repeat !important; }
+                background-repeat: no-repeat !important; 
+                background-position: center;
+                background-size: contain;}
             html body .panel#work .panel-content .job .card-image .slider .indicators {
               z-index: 1000; }
               html body .panel#work .panel-content .job .card-image .slider .indicators .indicator-item.active {
