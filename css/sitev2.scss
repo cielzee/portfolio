@@ -272,9 +272,9 @@ html {
                         }
 
                         .card-image {
-                            padding: 32px;
+                            padding: 32px 32px 0 32px;
                             @include respond-to($phone) {
-                                padding: 12px;
+                                padding: 8px 8px 0 8px;
                             }
 
                             .slider {
@@ -337,18 +337,24 @@ html {
                                 position: absolute;
                                 right: 32px;
                                 top: 32px;
+                                @include respond-to($phone) {
+                                  right: 16px;
+                                  top: 16px;
+                                }
                             }
 
                             .card-title {
                               color: $teal-lighten-2;
                                 @include respond-to($phone) {
                                     font-size: 16px;
+                                    line-height: normal;
+                                    padding: 0;
                                 }
                             }
 
                             .job-description {
                                 @include respond-to($phone) {
-                                    font-size: 12px;
+                                    font-size: 14px;
                                     text-align: left;
                                 }
                             }
@@ -422,7 +428,6 @@ html {
                         .skills-body {
                             @include respond-to($phone) {
                                 font-size: 14px;
-                                font-weight: 300;
                             }
                         }
                     }
