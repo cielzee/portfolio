@@ -54,10 +54,8 @@ html {
                             transition-property: color, background;
                             transition-duration: 0.5s;
                             transition-timing-function: ease-out;
-                            // background: #CFD8DC;
                             background: $teal-lighten-5;
                             a {
-                                // color: #607D8B;
                                 color: $teal;
                             }
                         }
@@ -70,7 +68,7 @@ html {
                             display: block;
                             @include respond-to($phone) {
                                 font-size: 14px;
-                                padding: 4px 8px;
+                                padding: 8px 16px;
                                 line-height: 30px;
                             }
                         }
@@ -84,10 +82,6 @@ html {
                 text-align: center;
                 padding-top: 86px;
                 color: #fff;
-                @include respond-to($phone) {
-                    padding-top: 40px;
-                }
-
                 .panel-content {
                     width: 100%;
                     text-align: center;
@@ -153,8 +147,11 @@ html {
 
                           .collapsible-body {
                             border: none;
-                            font-size: 15px;
+                            font-size: 16px;
                             margin-top: 16px;
+                            @include respond-to($phone) {
+                              font-size: 14px;
+                            }
                           }
                         }
 
@@ -162,7 +159,7 @@ html {
                 }
             }
 
-            &#experience {
+            &#work {
                 text-align: center;
 
                 .panel-content {
@@ -252,7 +249,7 @@ html {
                 }
             }
 
-            &#work {
+            &#exp {
                 position: relative;
                 .panel-content {
                     padding: 132px 0;
@@ -262,12 +259,11 @@ html {
 
                     .job {
                         .text {
-                            @include respond-to($phone) {
-                                padding: 16px 8px;
-                            }
-
                             .text-block {
-                                margin-bottom: 26px;
+                                margin-bottom: 32px;
+                                &:last-of-type {
+                                  margin-bottom: 0;
+                                }
                             }
 
                             .tasks {
@@ -280,9 +276,9 @@ html {
                         }
 
                         .card-image {
-                            padding: 16px;
+                            padding: 32px 32px 0 32px;
                             @include respond-to($phone) {
-                                padding: 8px;
+                                padding: 16px 16px 0 16px;
                             }
 
                             .slider {
@@ -321,8 +317,9 @@ html {
                         }
 
                         .card-content {
+                            padding: 32px;
                             @include respond-to($phone) {
-                                padding: 0 12px 12px;
+                                padding: 16px;
                             }
 
                             .card-title {
@@ -335,22 +332,33 @@ html {
                         }
 
                         .card-reveal {
+                          padding: 32px;
+                          @include respond-to($phone) {
+                            padding: 16px;
+                          }
                             i.right {
                                 margin-right: 0;
                                 position: absolute;
-                                right: 14px;
+                                right: 32px;
+                                top: 32px;
+                                @include respond-to($phone) {
+                                  right: 16px;
+                                  top: 16px;
+                                }
                             }
 
                             .card-title {
                               color: $teal-lighten-2;
                                 @include respond-to($phone) {
                                     font-size: 16px;
+                                    line-height: normal;
+                                    padding: 0;
                                 }
                             }
 
                             .job-description {
                                 @include respond-to($phone) {
-                                    font-size: 12px;
+                                    font-size: 14px;
                                     text-align: left;
                                 }
                             }
@@ -424,7 +432,6 @@ html {
                         .skills-body {
                             @include respond-to($phone) {
                                 font-size: 14px;
-                                font-weight: 300;
                             }
                         }
                     }
