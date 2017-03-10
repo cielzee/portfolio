@@ -329,6 +329,9 @@ html {
 
                         .card-reveal {
                           padding: 32px;
+                          @include respond-to($phone) {
+                            padding: 16px;
+                          }
                             i.right {
                                 margin-right: 0;
                                 position: absolute;
