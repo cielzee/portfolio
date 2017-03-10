@@ -68,7 +68,7 @@ html {
                             display: block;
                             @include respond-to($phone) {
                                 font-size: 14px;
-                                padding: 8px;
+                                padding: 8px 16px;
                                 line-height: 30px;
                             }
                         }
@@ -147,8 +147,11 @@ html {
 
                           .collapsible-body {
                             border: none;
-                            font-size: 15px;
+                            font-size: 16px;
                             margin-top: 16px;
+                            @include respond-to($phone) {
+                              font-size: 14px;
+                            }
                           }
                         }
 
@@ -156,7 +159,7 @@ html {
                 }
             }
 
-            &#experience {
+            &#work {
                 text-align: center;
 
                 .panel-content {
@@ -246,7 +249,7 @@ html {
                 }
             }
 
-            &#work {
+            &#exp {
                 position: relative;
                 .panel-content {
                     padding: 132px 0;
@@ -256,10 +259,6 @@ html {
 
                     .job {
                         .text {
-                            @include respond-to($phone) {
-                                padding: 16px 8px;
-                            }
-
                             .text-block {
                                 margin-bottom: 32px;
                                 &:last-of-type {
@@ -273,9 +272,9 @@ html {
                         }
 
                         .card-image {
-                            padding: 32px 32px 0 32px;
+                            padding: 32px;
                             @include respond-to($phone) {
-                                padding: 8px;
+                                padding: 12px;
                             }
 
                             .slider {
@@ -316,7 +315,7 @@ html {
                         .card-content {
                             padding: 32px;
                             @include respond-to($phone) {
-                                padding: 0 12px 12px;
+                                padding: 16px;
                             }
 
                             .card-title {
