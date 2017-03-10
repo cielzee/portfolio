@@ -256,152 +256,157 @@ html {
                     @include respond-to($phone) {
                         padding: 32px 0;
                     }
+                    .row {
+                      display: -ms-flex; display: -webkit-flex; display: flex;
+                      .job {
+                        flex: 1;
+                          .text {
+                            height: 100%;
+                              .text-block {
+                                  margin-bottom: 32px;
+                                  &:last-of-type {
+                                    margin-bottom: 0;
+                                  }
+                              }
 
-                    .job {
-                        .text {
-                            .text-block {
-                                margin-bottom: 32px;
-                                &:last-of-type {
-                                  margin-bottom: 0;
-                                }
-                            }
+                              .tasks {
+                                  margin-top: 8px;
+                              }
 
-                            .tasks {
-                                margin-top: 8px;
-                            }
+                              p {
+                                color: $light-grey;
+                              }
+                          }
 
-                            p {
-                              color: $light-grey;
-                            }
-                        }
+                          .card-image {
+                              padding: 32px 32px 0 32px;
+                              @include respond-to($phone) {
+                                  padding: 16px 16px 0 16px;
+                              }
 
-                        .card-image {
-                            padding: 32px 32px 0 32px;
-                            @include respond-to($phone) {
-                                padding: 16px 16px 0 16px;
-                            }
+                              .slider {
+                                  @include respond-to($phone) {
+                                      height: 245px;
+                                  }
 
-                            .slider {
-                                @include respond-to($phone) {
-                                    height: 245px;
-                                }
+                                  .slides {
+                                      background: none;
 
-                                .slides {
-                                    background: none;
+                                      img {
+                                          color: #000;
+                                          background-repeat: no-repeat !important;
+                                          @include respond-to($phone) {
+                                              background-size: contain;
+                                              height: 221px;
+                                          }
+                                      }
+                                  }
 
-                                    img {
-                                        color: #000;
-                                        background-repeat: no-repeat !important;
-                                        @include respond-to($phone) {
-                                            background-size: contain;
-                                            height: 221px;
-                                        }
-                                    }
-                                }
+                                  .indicators {
+                                      z-index: 1000;
 
-                                .indicators {
-                                    z-index: 1000;
+                                      .indicator-item.active {
+                                          background-color: $teal-lighten-2 !important;
+                                      }
 
-                                    .indicator-item.active {
-                                        background-color: $teal-lighten-2 !important;
-                                    }
+                                      .indicator-item {
+                                          @include respond-to($phone) {
+                                              width: 10px;
+                                              height: 10px;
+                                          }
+                                      }
+                                  }
+                              }
+                          }
 
-                                    .indicator-item {
-                                        @include respond-to($phone) {
-                                            width: 10px;
-                                            height: 10px;
-                                        }
-                                    }
-                                }
-                            }
-                        }
+                          .card-content {
+                              padding: 32px;
+                              @include respond-to($phone) {
+                                  padding: 16px;
+                              }
 
-                        .card-content {
+                              .card-title {
+                                color: $teal-lighten-2;
+                                  @include respond-to($phone) {
+                                      font-size: 16px;
+                                      line-height: 14px;
+                                  }
+                              }
+                          }
+
+                          .card-reveal {
                             padding: 32px;
                             @include respond-to($phone) {
-                                padding: 16px;
+                              padding: 16px;
                             }
+                              i.right {
+                                  margin-right: 0;
+                                  position: absolute;
+                                  right: 32px;
+                                  top: 32px;
+                                  @include respond-to($phone) {
+                                    right: 16px;
+                                    top: 16px;
+                                  }
+                              }
 
-                            .card-title {
-                              color: $teal-lighten-2;
-                                @include respond-to($phone) {
-                                    font-size: 16px;
-                                    line-height: 14px;
-                                }
-                            }
-                        }
+                              .card-title {
+                                color: $teal-lighten-2;
+                                  @include respond-to($phone) {
+                                      font-size: 16px;
+                                      line-height: normal;
+                                      padding: 0;
+                                  }
+                              }
 
-                        .card-reveal {
-                          padding: 32px;
-                          @include respond-to($phone) {
-                            padding: 16px;
+                              .job-description {
+                                  @include respond-to($phone) {
+                                      font-size: 14px;
+                                      text-align: left;
+                                  }
+                              }
                           }
-                            i.right {
-                                margin-right: 0;
-                                position: absolute;
-                                right: 32px;
-                                top: 32px;
-                                @include respond-to($phone) {
-                                  right: 16px;
-                                  top: 16px;
-                                }
-                            }
 
-                            .card-title {
-                              color: $teal-lighten-2;
-                                @include respond-to($phone) {
-                                    font-size: 16px;
-                                    line-height: normal;
-                                    padding: 0;
-                                }
-                            }
+                          .job-title {
+                              color: #555;
+                              font-weight: 700;
+                              font-size: 24px;
+                              line-height: 30px;
+                              padding: 4px 0;
+                          }
 
-                            .job-description {
-                                @include respond-to($phone) {
-                                    font-size: 14px;
-                                    text-align: left;
-                                }
-                            }
-                        }
+                          .company {
+                              color: #008080;
+                              display: inline;
+                              font-size: 16px;
+                              line-height: 16px;
+                              padding: 4px 0;
+                          }
 
-                        .job-title {
-                            color: #555;
-                            font-weight: 700;
-                            font-size: 24px;
-                            line-height: 30px;
-                            padding: 4px 0;
-                        }
+                          .time {
+                              font-size: 14px;
+                              font-weight: 400;
+                              padding: 4px 0 8px;
+                              color: #ccc;
+                          }
 
-                        .company {
-                            color: #008080;
-                            display: inline;
-                            font-size: 16px;
-                            line-height: 16px;
-                            padding: 4px 0;
-                        }
+                          .job-description {
+                              color: #555;
+                              margin: 8px 0;
 
-                        .time {
-                            font-size: 14px;
-                            font-weight: 400;
-                            padding: 4px 0 8px;
-                            color: #ccc;
-                        }
+                              .subtitle {
+                                  font-weight: 600;
+                              }
+                          }
 
-                        .job-description {
-                            color: #555;
-                            margin: 8px 0;
-
-                            .subtitle {
-                                font-weight: 600;
-                            }
-                        }
-
-                        &:hover {
-                            .job-description {
-                                display: block;
-                            }
-                        }
+                          &:hover {
+                              .job-description {
+                                  display: block;
+                              }
+                          }
+                      }
                     }
+
                 }
             }
 
