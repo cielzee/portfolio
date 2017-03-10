@@ -54,10 +54,8 @@ html {
                             transition-property: color, background;
                             transition-duration: 0.5s;
                             transition-timing-function: ease-out;
-                            // background: #CFD8DC;
                             background: $teal-lighten-5;
                             a {
-                                // color: #607D8B;
                                 color: $teal;
                             }
                         }
@@ -70,7 +68,7 @@ html {
                             display: block;
                             @include respond-to($phone) {
                                 font-size: 14px;
-                                padding: 4px 8px;
+                                padding: 8px;
                                 line-height: 30px;
                             }
                         }
@@ -84,10 +82,6 @@ html {
                 text-align: center;
                 padding-top: 86px;
                 color: #fff;
-                @include respond-to($phone) {
-                    padding-top: 40px;
-                }
-
                 .panel-content {
                     width: 100%;
                     text-align: center;
@@ -267,7 +261,10 @@ html {
                             }
 
                             .text-block {
-                                margin-bottom: 26px;
+                                margin-bottom: 32px;
+                                &:last-of-type {
+                                  margin-bottom: 0;
+                                }
                             }
 
                             .tasks {
@@ -276,7 +273,7 @@ html {
                         }
 
                         .card-image {
-                            padding: 16px;
+                            padding: 32px 32px 0 32px;
                             @include respond-to($phone) {
                                 padding: 8px;
                             }
@@ -317,6 +314,7 @@ html {
                         }
 
                         .card-content {
+                            padding: 32px;
                             @include respond-to($phone) {
                                 padding: 0 12px 12px;
                             }
@@ -331,10 +329,12 @@ html {
                         }
 
                         .card-reveal {
+                          padding: 32px;
                             i.right {
                                 margin-right: 0;
                                 position: absolute;
-                                right: 14px;
+                                right: 32px;
+                                top: 32px;
                             }
 
                             .card-title {
