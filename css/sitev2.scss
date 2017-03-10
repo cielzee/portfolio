@@ -260,9 +260,9 @@ html {
                       display: -ms-flex;
                       display: -webkit-flex;
                       display: flex;
-                        @include respond-to($phone) {
-                          display: block;
-                        }
+                      @include respond-to($phone) {
+                        display: block;
+                      }
                       .job {
                         flex: 1;
                           .text {
